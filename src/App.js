@@ -12,7 +12,12 @@ import Home from "./components/home"
 import aboutMe from "./components/aboutMe";
 import contact from "./components/contact";
 import experience from "./components/totalExperience";
-import footer from "./components/footer"
+import footer from "./components/footer";
+import { Space } from 'antd';
+import { Skeleton } from 'antd';
+
+
+
 
 const { Header, Footer, Content } = Layout;
 
@@ -24,6 +29,7 @@ function App() {
       <div>
       <Layout>
       <Header>
+      <Space>
       <NavLink to="/" exact className="link" activeClassName="active">
           Home
         </NavLink>
@@ -36,15 +42,17 @@ function App() {
         <NavLink to="/contact" className="link" activeClassName="active">
           Contact
         </NavLink>
+        </Space>
       </Header>
       <Content>
-   
+      
       <Switch>
           <Route path="/" exact children={Home} />
           <Route path="/aboutMe" exact children={aboutMe} />
           <Route path="/experience" children={experience} />
           <Route path="/contact" children={contact} />
         </Switch>
+    
       </Content>
       
   <Footer>{footer}</Footer>
