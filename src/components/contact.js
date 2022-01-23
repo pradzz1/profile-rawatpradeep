@@ -5,12 +5,12 @@ const contact = () =>{
   return(<Card
     hoverable
     style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+    cover={<img alt="example" src="" />}
   >
     <Meta title="Europe Street beat" description="www.instagram.com" />
    
 
-<Meta title=" #1087 PRESTIGE TRANQUALITY , bangalore India -9886188822"></Meta>
+<Meta title="9886188822"></Meta>
 <Meta title="pradzz.rawat6@gmail.com"></Meta>
   </Card>);
 }
