@@ -14,6 +14,7 @@ import contact from "./components/contact";
 import experience from "./components/totalExperience";
 import footer from "./components/footer";
 import { Space } from "antd";
+import developerCodesvg from './developerCode.svg' ; 
 
 const { Header, Footer, Content } = Layout;
 function App() {
@@ -25,7 +26,7 @@ function App() {
       <Header id="header" className="clearfix">
      <div className="ant-row">
      <div className="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-6 ant-col-xl-5 ant-col-xxl-4"><h1>
-       <a id="logo" href="/"><img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"/>Pradeep Rawat - Developer</a></h1>
+       <a id="logo" href="/"><img alt="logo" src={developerCodesvg}/>Pradeep Rawat - Developer</a></h1>
        </div>
        <div className="ant-col menu-row ant-col-xs-0 ant-col-sm-0 ant-col-md-18 ant-col-lg-18 ant-col-xl-9 ant-col-xxl-20"></div>
        <div className="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-6 ant-col-lg-6 ant-col-xl-5 ant-col-xxl-4">
