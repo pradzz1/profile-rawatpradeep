@@ -1,5 +1,4 @@
 import React from 'react';
-import {  } from '@ant-design/icons';
 //import filmStripe from './filmstripe';
 import SectionHeader from './sectionHeader';
 
