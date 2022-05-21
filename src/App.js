@@ -18,9 +18,9 @@ function App() {
       <div className="main-wrapper">
       <Switch>
         <Route path="/profile-rawatpradeep" exact children={Home} />
-          <Route path="/profile-rawatpradeep/aboutMe" exact children={aboutMe} />
-          <Route path="/profile-rawatpradeep/experience" children={experience} />
-          <Route path="/profile-rawatpradeep/contact" children={contact} />
+          <Route path="/aboutMe" exact children={aboutMe} />
+          <Route path="/experience" children={experience} />
+          <Route path="/contact" children={contact} />
          
         </Switch>
         </div>
