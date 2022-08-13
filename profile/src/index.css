@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.minH{
+    min-height: 85.5vh;
+}
