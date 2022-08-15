@@ -3,7 +3,7 @@ import {getListings , getListingReview} from '../../middleware/http';
 import Toast from '../Toast';
 import Button from '../button';
 import {BUTTON_PROPS , TOAST_PROPERTIES} from '../toastProperties';
-
+import Carousel from '../Carousal';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -13,7 +13,7 @@ const navigation = [
 ]
 export default function Home (){
   const [list ,setList] = useState([]); 
-  const [position,setPostion] = useState('Select Position');
+  const [position,setPostion] = useState('bottom-right');
   const [autoDeleteTime ,setAutoDeleteTime] = useState(3000);
 
   const selectPosition = (e) => {
@@ -33,23 +33,27 @@ setList([]);
     }
     fetchData();
   });
+  
     return(
-      <><div className="toast-buttons">
+      <>
+      <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
+
+      <Carousel>
+     </Carousel> </div>
+      <div className="toast-buttons">
       {
         BUTTON_PROPS.map(e => 
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow"><Button 
+         <Button 
             key={e.id}
             className={`${position === 'Select Position' ? `${e.className} btn-disable` : `${e.className}`}`}
             label={e.label}
             handleClick={() => showToast(e.type)}
-          /></div>
-</div>        )
+          />    )
       }
     </div><Toast 
       toastList={list}
       position={position}
-      autoDelete={10}
+      autoDelete={true}
       autoDeleteTime={autoDeleteTime}
     /><div className="relative bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
