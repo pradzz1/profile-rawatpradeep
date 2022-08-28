@@ -4,6 +4,7 @@ import Toast from '../Toast';
 import Button from '../button';
 import {BUTTON_PROPS , TOAST_PROPERTIES} from '../toastProperties';
 import Carousel from '../Carousal';
+import Slides from '../Slides';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -35,12 +36,8 @@ setList([]);
   });
   
     return(
-      <>
-      <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
-
-      <Carousel>
-     </Carousel> </div>
-      <div className="toast-buttons">
+      <><Slides></Slides>
+       <div className="toast-buttons">
       {
         BUTTON_PROPS.map(e => 
          <Button 
@@ -55,7 +52,12 @@ setList([]);
       position={position}
       autoDelete={true}
       autoDeleteTime={autoDeleteTime}
-    /><div className="relative bg-white overflow-hidden">
+    />
+      <div style={{ maxWidth: 1200, marginLeft: 'auto', marginRight: 'auto', marginTop: 64 }}>
+
+      <Carousel>
+     </Carousel> </div>
+     <div className="relative bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           

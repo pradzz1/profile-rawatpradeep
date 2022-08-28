@@ -1,6 +1,6 @@
 import React from 'react';
 
-const error = () => {
+const Error = () => {
 return (<section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
 <img className="absolute top-0 right-0 md:-mr-96 md:-mt-112" src="zospace-assets/lines/circle.svg" alt=""/>
 <img className="absolute top-0 right-0 h-40 lg:h-80 lg:mr-64 lg:mt-24" src="zospace-assets/images/five-stars.svg" alt=""/>
@@ -20,4 +20,4 @@ return (<section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden
 </div>
 </section>);
 }
-export default error;
+export default Error;
