@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import details from './Detail.json';
 
 export default function  Contact() {
+  const [myrecords , setMyrecords] = useState({ myrecords : details.records['Master Automotives'] });
+ const  onChangeQty = function(widgetName)
+{
+  setMyrecords({
+     myrecords: details.records[widgetName]
+   });
+}
    return (
-    <><section className="relative  2xl:py-40 bg-gray-800">
+    <>
+     
+    <button onClick={() => onChangeQty('Repair Solutions')} >Change </button>
+     {Object.keys(myrecords).map((CompanyName, i) => (
+<div key={CompanyName}>
+  {myrecords[CompanyName].map((product, j) => (
+    <><h2>Supplier: {product.CompanyName}</h2><tr>
+
+      <td>
+        <h4> {product["SparePartID"]} </h4>
+      </td>
+
+      <td>
+        <h4>{product["Name"]} </h4>
+      </td>
+
+      <td>
+        <h4> {product["Price"]} </h4>
+      </td>
+    </tr></>
+  ))}
+  
+  </div>
+
+  ))}
+
+    <section className="relative  2xl:py-40 bg-gray-800">
        <img className="hidden lg:block absolute top-0 left-0 w-2/5" src="zospace-assets/images/map.svg" alt="" />
        <img className="hidden lg:block absolute top-0 left-0 mt-40 ml-40" src="zospace-assets/images/office-tag.svg" alt="" />
        <div className="relative container px-4 mx-auto minH" >

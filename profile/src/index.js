@@ -7,25 +7,25 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom' ;
 import About from "./components/AboutMe";
 import Contact from "./components/Contact";
 const routing = (  
-  <Router>  
-    <div>  
-      <h1>React Router Example</h1>  
-      <ul>  
-        <li>  
-          <Link to="/">Home</Link>  
-        </li>  
-        <li>  
-          <Link to="/about">About</Link>  
-        </li>  
-        <li>  
-          <Link to="/contact">Contact</Link>  
-        </li>  
-      </ul>  
-      <Route exact path="/" component={App} />  
-      <Route path="/about" component={About} />  
-      <Route path="/contact" component={Contact} />  
-    </div>  
-  </Router>  
+  <><Router>
+    <div>
+      <ul className='flex'>
+        <li className='mr-6'>
+          <Link to="/profile-rawatpradeep">Home</Link>
+        </li>
+        <li className='mr-6'>
+          <Link to="/about">About</Link>
+        </li>
+        <li className='mr-6'>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+      <Route exact path="/profile-rawatpradeep" component={App} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+    </div>
+  </Router>
+  </>
 )  
 ReactDOM.render(
   routing,
