@@ -1,13 +1,14 @@
 import React from 'react';
 import Error from './error';
 import SectionHeader from './sectionHeader'
+import TechStack from './TechStack';
 function Slides() {
     const [index, setIndex] = React.useState(0);
     let comp = <Error></Error>;
     let section = <SectionHeader></SectionHeader>;
     const slides = [
       {
-          Component : comp,
+          Component : <TechStack></TechStack>,
           text: "We're gonna do 3 fundamental exercises."
       },
       {
@@ -15,7 +16,7 @@ function Slides() {
           text: "Do 10 reps. Remember about full range of motion. Don't rush."
       },
       {
-          title: "Next, 20 squats",
+          title: comp,
           text: "Squats are important. Remember to keep your back straight."
       },
       {
@@ -45,7 +46,7 @@ function Slides() {
                     onClick={() => setIndex(index - 1)}
                     className="small"
                 >
-                    Prev
+                    
                 </button>
                 <button
                     data-testid="button-next"

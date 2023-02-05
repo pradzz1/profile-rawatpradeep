@@ -4,3 +4,12 @@
 .minH{
     min-height: 85.5vh;
 }
+body{
+    background-color: #D9DBD5;
+}
+.navigation{
+    padding: 1%;
+    background-color: black;
+    color: #fff;
+
+}

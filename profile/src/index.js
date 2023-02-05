@@ -8,8 +8,8 @@ import About from "./components/AboutMe";
 import Contact from "./components/Contact";
 const routing = (  
   <><Router>
-    <div>
-      <ul className='flex'>
+    <div >
+      <ul className='flex navigation'>
         <li className='mr-6'>
           <Link to="/profile-rawatpradeep">Home</Link>
         </li>
@@ -17,7 +17,7 @@ const routing = (
           <Link to="/about">About</Link>
         </li>
         <li className='mr-6'>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Contact Me</Link>
         </li>
       </ul>
       <Route exact path="/profile-rawatpradeep" component={App} />
