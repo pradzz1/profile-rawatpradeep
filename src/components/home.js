@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 //import filmStripe from './filmstripe';
 const home = (props) =>{
     return(
@@ -22,10 +23,13 @@ const home = (props) =>{
                 <span className="block text-indigo-600 xl:inline">Developer</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              I am a web developer from Dehradun, Uttarakhand and currently living in Bangalore.
+              I am a web developer from India, Karnataka currently living in Bangalore.
               I enjoy Building everything from small business sites to rich interactive web apps.
-              If you are a business seeking a web presence or any employer looking to hire, you can get in touch with me here.
+              If you are a business seeking a web presence or any employer looking to hire, you can get in touch with me.
                          </p>
+                         <div>
+          <Button variant="contained">Contact</Button>
+        </div>
             </div>
           </main>
         </div>
@@ -38,6 +42,7 @@ const home = (props) =>{
         />
       </div>
     </div>
+   
     );
 }
 export default home;
